@@ -1,0 +1,15 @@
+package PROJETO;
+public class Aviao extends Aeronave {
+	public Passageiro lugares [][];
+	private int fileira, assento;
+	
+	public Aviao(String modelo, int fileira, int assento) {
+		super(modelo);
+		lugares = new Passageiro[fileira][assento];
+		this.fileira = fileira;
+		this.assento = assento;
+	}
+	
+	
+	
+}

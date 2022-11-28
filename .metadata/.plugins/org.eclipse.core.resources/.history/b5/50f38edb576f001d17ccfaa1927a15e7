@@ -1,0 +1,5 @@
+package PROJETO;
+
+public class Aviao extends Aeronave {
+	public int lugares
+}

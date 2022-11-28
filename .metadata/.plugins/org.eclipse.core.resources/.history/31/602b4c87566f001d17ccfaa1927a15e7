@@ -1,0 +1,4 @@
+
+public class Aviao extends Aeronave {
+	public int lugares
+}

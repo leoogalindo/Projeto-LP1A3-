@@ -95,45 +95,19 @@ public class Main {
 					break;
 				case 2:
 					cadastraVoo();
-					break;
 				case 3: 
 					menuPrincipal();
 					break;
+				default:JOptionPane.showMessageDialog(null, "Opção inválida!");
+					
 			}
 		}
 		
 	}
 
 	private static void cadastraAeronave() {
-		String modeloAeronave, fileiras, assentos;
+		// TODO Auto-generated method stub
 		
-		while(true) {
-			try {
-				modeloAeronave = JOptionPane.showInputDialog(null, "Cadastrando Aeronave \n Insira o modelo da aeronave: ");
-				if(modeloAeronave.length() < 1) {
-					JOptionPane.showMessageDialog(null, "Modelo vázio!");
-					continue;
-				}
-				
-				fileiras = JOptionPane.showInputDialog(null, "Cadastrando Aeronave \n Insira o número de fileiras: ");
-				int fileirasNum = Integer.parseInt(fileiras);
-				assentos = JOptionPane.showInputDialog(null, "Cadastrando Aeronave \n Insira o número de assentos: ");
-				int assentosNum = Integer.parseInt(assentos);
-				
-				listaDeAvioes.add(new Aviao(modeloAeronave, fileirasNum, assentosNum));
-				break;
-				
-			} catch (NumberFormatException |  NullPointerException e) {
-				if (e.getClass().toString().equals("class java.lang.NumberFormatException")){
-					JOptionPane.showMessageDialog(null, "Não é um número!");
-				} else if (e.getClass().toString().equals("class java.lang.NullPointerException")){
-					JOptionPane.showMessageDialog(null, "Cancelando a operação");
-				}
-			}
-		}
-		
-		numAv++;
-		JOptionPane.showMessageDialog(null, "Avião com modelo:  " + listaDeAvioes.get(numAv).modelo + " \n Criado com sucesso.");
 	}
 
 	private static void cadastraVoo() {

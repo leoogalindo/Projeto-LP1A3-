@@ -121,7 +121,6 @@ public class Main {
 				int assentosNum = Integer.parseInt(assentos);
 				
 				listaDeAvioes.add(new Aviao(modeloAeronave, fileirasNum, assentosNum));
-				break;
 				
 			} catch (NumberFormatException |  NullPointerException e) {
 				if (e.getClass().toString().equals("class java.lang.NumberFormatException")){
@@ -132,8 +131,7 @@ public class Main {
 			}
 		}
 		
-		numAv++;
-		JOptionPane.showMessageDialog(null, "Avião com modelo:  " + listaDeAvioes.get(numAv).modelo + " \n Criado com sucesso.");
+		
 	}
 
 	private static void cadastraVoo() {

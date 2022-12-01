@@ -104,7 +104,7 @@ public class Main {
 		
 	}
 
-	private static void cadastraAeronave() {
+	private static String cadastraAeronave() {
 		String modeloAeronave, fileiras, assentos;
 		
 		while(true) {
@@ -128,12 +128,15 @@ public class Main {
 					JOptionPane.showMessageDialog(null, "Não é um número!");
 				} else if (e.getClass().toString().equals("class java.lang.NullPointerException")){
 					JOptionPane.showMessageDialog(null, "Cancelando a operação");
+					return("Cancel");
 				}
 			}
 		}
 		
 		numAv++;
-		JOptionPane.showMessageDialog(null, "Avião com modelo:  " + listaDeAvioes.get(numAv).modelo + " \n Criado com sucesso.");
+		
+		
+		
 	}
 
 	private static void cadastraVoo() {

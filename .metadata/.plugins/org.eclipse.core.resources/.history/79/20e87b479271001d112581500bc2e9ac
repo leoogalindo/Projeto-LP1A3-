@@ -133,7 +133,9 @@ public class Main {
 		}
 		
 		numAv++;
-		JOptionPane.showMessageDialog(null, "Avião com modelo:  " + listaDeAvioes.get(numAv).modelo + " \n Criado com sucesso.");
+		JOptionPane.showMessageDialog(null, "Avião " + listaDeAvioes.get(numAv).modelo + " criado com sucesso.");
+		
+		
 	}
 
 	private static void cadastraVoo() {

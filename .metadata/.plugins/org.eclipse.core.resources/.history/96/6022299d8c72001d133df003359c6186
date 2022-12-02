@@ -151,17 +151,17 @@ public class Main {
 					nVoo = JOptionPane.showInputDialog(null, "Cadastrando Voo \n Informe o nº do voo desejado: ");
 					voo = Integer.parseInt(nVoo);
 					hora = JOptionPane.showInputDialog(null, "Cadastrando hora do Voo \n Informe a hora: ");
-					if(hora.length() > 0) {
+					if(hora == null) {
+						JOptionPane.showMessageDialog(null, "Hora não pode ser vazia!");
+					} else {
 						data = JOptionPane.showInputDialog(null, "Cadastrando data do Voo \n Informe a data: ");
-						if(data.length() > 0) {
+						if(data.length() < 0) {
+							JOptionPane.showMessageDialog(null, "Data não pode ser vazia!");
+						} else {
 							numVoo++;
 							listaDeVoos.add(numVoo, new Voo(listaDeAvioes.get(numAviao - 1), voo, data, hora));
 							break;
-						} else {
-							JOptionPane.showMessageDialog(null, "Data não pode ser vazia!");
 						}
-					} else {
-						JOptionPane.showMessageDialog(null, "Hora não pode ser vazia!");
 					}
 				}
 			} catch (NumberFormatException |  NullPointerException | IndexOutOfBoundsException e) {
@@ -174,7 +174,6 @@ public class Main {
 			
 		}
 		
-		JOptionPane.showMessageDialog(null, "Voo com número: " + listaDeVoos.get(numVoo).getNro() + " criado com sucesso!" );
 	}
 
 }

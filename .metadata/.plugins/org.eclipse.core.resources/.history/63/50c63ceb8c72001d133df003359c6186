@@ -174,7 +174,6 @@ public class Main {
 			
 		}
 		
-		JOptionPane.showMessageDialog(null, "Voo com número: " + listaDeVoos.get(numVoo).getNro() + " criado com sucesso!" );
 	}
 
 }

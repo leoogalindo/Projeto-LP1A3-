@@ -138,7 +138,7 @@ public class Main {
 
 	private static void cadastraVoo() {
 		String nVoo, data, hora, aviao;
-		int numAviao, voo, numHora;
+		int numAviao, voo;
 		
 		while(true) {
 			try {
@@ -151,20 +151,15 @@ public class Main {
 					nVoo = JOptionPane.showInputDialog(null, "Cadastrando Voo \n Informe o nº do voo desejado: ");
 					voo = Integer.parseInt(nVoo);
 					hora = JOptionPane.showInputDialog(null, "Cadastrando hora do Voo \n Informe a hora: ");
-					numHora = Integer.parseInt(hora);
 					if(hora.length() > 0) {
-						if(numHora > 24) {
-							JOptionPane.showMessageDialog(null, "Hora inválida!");
+						data = JOptionPane.showInputDialog(null, "Cadastrando data do Voo \n Informe a data: ");
+						if(data.length() > 0) {
+							numVoo++;
+							listaDeVoos.add(numVoo, new Voo(listaDeAvioes.get(numAviao - 1), voo, data, hora));
+							break;
 						} else {
-							data = JOptionPane.showInputDialog(null, "Cadastrando data do Voo \n Informe a data: ");
-							if(data.length() > 0) {
-								numVoo++;
-								listaDeVoos.add(numVoo, new Voo(listaDeAvioes.get(numAviao - 1), voo, data, hora));
-								break;
-							} else {
-								JOptionPane.showMessageDialog(null, "Data não pode ser vazia!");
-							}
-						}						 
+							JOptionPane.showMessageDialog(null, "Data não pode ser vazia!");
+						}
 					} else {
 						JOptionPane.showMessageDialog(null, "Hora não pode ser vazia!");
 					}

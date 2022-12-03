@@ -37,7 +37,7 @@ public class Main {
 		int aux = 1;
 		while(true) {
 			String resp = JOptionPane.showInputDialog("                Menu Principal \nSelecione uma das opções abaixo: "
-					+ "\n1) Parâmetros de Sistema\n2) Reserva de Passagem\n3) Sair");
+					+ "\n1) Parêmetros de Sistema\n2) Reserva de Passagem\n3) Sair");
 			valido = validaResp(resp, aux);
 			if(valido == 1 || valido == 2 || valido == 3) {
 				break;
@@ -78,39 +78,8 @@ public class Main {
 	}
 	
 	private static void reservaDePassagem() {
-		String opc;
-		int aux = 1, valido;
-		opc = JOptionPane.showInputDialog("Reserva de passagem \n 1) Realizar reserva \n 2) Consultar lugares disponiveis \n 3) Consultar reservas \n 4) Voltar");
-		valido = validaResp(opc, aux);
-		switch (valido) {
-			case 1: 
-				reservar();
-				break;
-			case 2: 
-				consultarLugar();
-				break;
-			case 3: 
-				consultarReservas();
-				break;
-			case 4: 
-				menuPrincipal();
-				break;
-		}
-		
-	}
-
-	private static void consultarReservas() {
 		// TODO Auto-generated method stub
 		
-	}
-
-	private static void consultarLugar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private static void reservar() {
-				
 	}
 
 	private static void prametrosDoSistema() {
@@ -118,7 +87,7 @@ public class Main {
 		int aux = 1, valido;
 		
 		while (true) {
-			opc = JOptionPane.showInputDialog("Parâmetros do sistema \n 1) Cadastrar Aeronave \n 2) Cadastrar Voo \n 3) Voltar");
+			opc = JOptionPane.showInputDialog("Parametros do sistema \n 1) Cadastrar Aeronave \n 2) Cadastrar Voo \n 3) Voltar");
 			valido = validaResp(opc, aux);
 			switch (valido) {
 				case 1:

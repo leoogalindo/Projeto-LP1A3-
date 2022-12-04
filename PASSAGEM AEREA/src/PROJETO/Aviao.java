@@ -33,7 +33,7 @@ public class Aviao extends Aeronave {
 
 	@Override
 	public String toString() {
-		return "Aviao [fileira=" + fileira + ", assento=" + assento + ", modelo=" + modelo + "]";
+		return "Aviao [MODELO: " + modelo +" | FILEIRA: " + fileira + " | ASSENTO: " + assento + "]";
 	}
 	
 }

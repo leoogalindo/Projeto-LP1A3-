@@ -27,4 +27,10 @@ public class Voo {
 		return hora;
 	}
 
+	@Override
+	public String toString() {
+		return "Voo " + nro + " - Aeronave: " + aeronave.getModelo() + " Data: " + data + " Hora: " + hora + "h";
+	}
+
+	
 }

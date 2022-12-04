@@ -15,7 +15,7 @@ public class Main {
 	static int numVoo = -1;
 
 	public static void main(String[] args) {
-		JOptionPane.showMessageDialog(null, "Sistema de reserva de passagens");
+		JOptionPane.showMessageDialog(null, "Sistema de reserva de passagens da companhia aérea XXXXX");
 
 		while (true) {
 			int opc = menuPrincipal();
@@ -150,7 +150,7 @@ public class Main {
 
 				numAviao = Integer.parseInt(aviao);
 				if (numAviao > listaDeAvioes.size()) {
-					JOptionPane.showMessageDialog(null, "Não há aviões cadastrados!");
+					JOptionPane.showMessageDialog(null, "Fora do range de aviões cadastrados!");
 				} else {
 					nVoo = JOptionPane.showInputDialog(null, "Cadastrando Voo \n Informe o nº do voo desejado: ");
 					voo = Integer.parseInt(nVoo);
@@ -387,7 +387,12 @@ public class Main {
 
 					JOptionPane.showMessageDialog(null,
 							"O voo de número " + num + " tem os seguintes lugares reservados: \n\n" + numb);
-				}				
+				}
+
+				else {
+					JOptionPane.showMessageDialog(null, "O número do voo não existe.\nPor favor, escolha outro!");
+				}
+				
 				control = 1;
 			}
 		}
@@ -445,6 +450,9 @@ public class Main {
 
 					JOptionPane.showMessageDialog(null,
 							"O Voo de número " + voo.getNro() + " tem " + lugar + " lugares disponível(s)");
+				} else {
+
+					JOptionPane.showMessageDialog(null, "O número do voo não existe.\nPor favor, escolha outro!");
 				}
 				control = 1;
 			}
